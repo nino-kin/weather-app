@@ -6,5 +6,4 @@ project(WeatherApp)
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-add_subdirectory(src/sample/client)
-add_subdirectory(src/sample/server)
+add_subdirectory(src)
