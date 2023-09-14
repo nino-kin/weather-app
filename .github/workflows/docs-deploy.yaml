@@ -1,0 +1,38 @@
+name: Build
+
+on:
+  push:
+    branches: [ master, main ]
+  pull_request:
+  release:
+      types:
+        - published
+
+jobs:
+  build:
+    runs-on: [ self-hosted, linux ]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Build
+        shell: bash
+        run: make build
+
+      - name: Build the site for MkDocs
+        shell: bash
+        run: docker run --rm -v ${{ github.workspace }}:/docs squidfunk/mkdocs-material build
+
+      - name: Deploy
+        if: github.event_name == 'release'
+        shell: bash
+        run: docker run --rm -v ~/.ssh:/root/.ssh -v ${{ github.workspace }}:/docs squidfunk/mkdocs-material gh-deploy
+
+      - name: Clean workspace
+        shell: bash
+        if: always()
+        run: |
+          echo "[MSG] Display workspace contents..." && ls -la
+          echo "[MSG] Cleaning up workspace..."
+          cd ${GITHUB_WORKSPACE} && rm -rf * && rm -rf ./.???*
+          echo "[MSG] Finish cleaning up!"
