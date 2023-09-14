@@ -1,0 +1,68 @@
+site_name: Weather App
+site_url: https://nino-kin.github.io/weather-app/
+site_description: User Guide for Weather App.
+repo_name: nino-kin/weather-app
+repo_url: https://github.com/nino-kin/weather-app
+edit_uri: edit/main/docs/
+
+nav:
+  - Home: index.md
+  - Guide:
+    - Getting Started: getting-started.md
+  - Appendix:
+    - Build MkDocs: appendix/build_mkdocs.md
+
+theme:
+    name: material
+    language: 'en'
+    icon:
+      logo: material/school
+      repo: fontawesome/brands/github
+    favicon: assets/git.svg
+    features:
+          - tabs: true
+          - header.autohide
+          - navigation.tabs
+          - navigation.instant
+          - navigation.footer
+          - content.action.edit
+          # - toc.integrate
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - footnotes
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - tables
+  - toc:
+      permalink: true
+  - codehilite:
+      linenums: true
+      guess_lang: false
+      use_pygments: false
+      noclasses: true
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.keys
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+
+extra:
+  search:
+    language: 'en'
+  version:
+    provider: mike
+
+extra_javascript:
+    - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js
+    - javascripts/config.js
+
+extra_css:
+    - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/default.min.css
