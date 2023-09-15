@@ -19,7 +19,7 @@ jobs:
         shell: bash
         run: make build
 
-      - name: Build the site for MkDocs
+      - name: Build the site with MkDocs
         shell: bash
         run: docker run --rm -v ${{ github.workspace }}:/docs squidfunk/mkdocs-material build
 
