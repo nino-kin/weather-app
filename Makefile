@@ -43,7 +43,7 @@ run: build ## Run services
 
 clean: ## Clean all artifacts
 	@echo -e "\nINFO: Cleaning up..."
-	@rm -rf $(BUILD_DIR)
+	@sudo rm -rf $(BUILD_DIR)
 	@[ -z "$$(find . -maxdepth 1 -type d -name 'site')" ] || sudo chmod -R 777 site/ && rm -rf site/
 
 #---------------------------------------#
