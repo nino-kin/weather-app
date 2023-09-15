@@ -7,6 +7,7 @@ RUN apt-get update && apt-get install -y \
     build-essential \
     cmake \
     libcurl4-openssl-dev \
+    libfmt-dev \
     nlohmann-json3-dev
 
 WORKDIR /app
