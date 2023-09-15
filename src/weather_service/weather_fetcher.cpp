@@ -29,7 +29,7 @@ int main(int argc, char* argv[]) {
         std::string apiKey = API_KEY;
         std::string city = CITY_NAME;
 
-        std::string apiUrl = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + apiKey;
+        std::string apiUrl = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + apiKey + "&units=metric";
 
         curl_easy_setopt(curl, CURLOPT_URL, apiUrl.c_str());
         curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, WriteCallback);
@@ -50,7 +50,7 @@ int main(int argc, char* argv[]) {
 
             fmt::print("City       : {}\n", city);
             fmt::print("Weather    : {}\n", weatherDescription);
-            fmt::print("Temperature: {:.2f} K\n", temperature);
+            fmt::print("Temperature: {:.2f} °C\n", temperature);
             fmt::print("Humidity   : {}%\n", humidity);
         }
 
