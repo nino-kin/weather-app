@@ -47,6 +47,15 @@ clean: ## Clean all artifacts
 	@[ -z "$$(find . -maxdepth 1 -type d -name 'site')" ] || sudo chmod -R 777 site/ && rm -rf site/
 
 #---------------------------------------#
+# Docker                                #
+#---------------------------------------#
+docker-compose-up: ## Create and start containers
+	@docker-compose up --build
+
+docker-compose-down: ## Remove containers, networks, images and named volumes
+	@docker-compose down --rmi all --volumes
+
+#---------------------------------------#
 # MkDocs                                #
 #---------------------------------------#
 mkdocs-build: ## Build documentation for MkDocs

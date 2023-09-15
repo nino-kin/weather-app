@@ -27,15 +27,15 @@ $ git clone git@github.com:nino-kin/weather-app.git
 !!! note
     If you've not added the SSH key to your GitHub account, please see [here](https://docs.github.com/ja/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account?platform=linux).
 
-### Updating the Document
+### Update the Document
 
-Write the document in Markdown language. If you want to know in detail, see the [official manual(https://www.mkdocs.org/). Then, this site uses the theme of [**Material for MkDocs**](https://squidfunk.github.io/mkdocs-material/reference/).
+Write the document in Markdown language. If you want to know in detail, see the [official manual](https://www.mkdocs.org/). Then, this site uses the theme of [**Material for MkDocs**](https://squidfunk.github.io/mkdocs-material/reference/).
 
 - [MkDocs](https://www.mkdocs.org/)
 - [Material for MkDocs - Reference](https://squidfunk.github.io/mkdocs-material/reference/)
 
 !!! note
-    The [official manual(https://www.mkdocs.org/) explains the procedure of setting up your environment, but this repository can be built the necessary environment with Docker. Therefore, you don't need to install any MkDocs plugins into your machine.
+    The [official manual](https://www.mkdocs.org/) explains the procedure of setting up your environment, but this repository can be built the necessary environment with Docker. Therefore, you don't need to install any MkDocs plugins into your machine.
 
 ### Run on host machine
 
