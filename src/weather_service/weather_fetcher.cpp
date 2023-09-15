@@ -1,5 +1,6 @@
 #include <iostream>
 #include <curl/curl.h>
+#include <fmt/core.h>
 #include <nlohmann/json.hpp>
 
 const std::string CITY_NAME = "Tokyo";
@@ -47,10 +48,10 @@ int main(int argc, char* argv[]) {
             double temperature = jsonData["main"]["temp"];
             int humidity = jsonData["main"]["humidity"];
 
-            std::cout << "City: " << city << std::endl;
-            std::cout << "Weather: " << weatherDescription << std::endl;
-            std::cout << "Temperature: " << temperature << " K" << std::endl;
-            std::cout << "Humidity: " << humidity << "%" << std::endl;
+            fmt::print("City       : {}\n", city);
+            fmt::print("Weather    : {}\n", weatherDescription);
+            fmt::print("Temperature: {:.2f} K\n", temperature);
+            fmt::print("Humidity   : {}%\n", humidity);
         }
 
         curl_easy_cleanup(curl);
