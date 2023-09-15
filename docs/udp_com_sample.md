@@ -6,7 +6,7 @@ cf. [UDP Server-Client implementation in C++](https://www.geeksforgeeks.org/udp-
 
 ### Overview
 
-The entire process can be broken down into the following steps : 
+The entire process can be broken down into the following steps :
 
 UDP Server :
 
