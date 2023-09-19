@@ -26,7 +26,7 @@ int main() {
 
     n = recvfrom(sockfd, (char *)buffer, sizeof(buffer), MSG_WAITALL, (struct sockaddr *)&cliaddr, (socklen_t *)&len);
     buffer[n] = '\0';
-    std::cout << "Client : " << buffer << std::endl;
+    std::cout << "Server : " << buffer << std::endl;
 
     close(sockfd);
     return 0;
