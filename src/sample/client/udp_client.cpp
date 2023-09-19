@@ -37,13 +37,13 @@ int main() {
     sendto(sockfd, (const char *)hello, strlen(hello),
         MSG_CONFIRM, (const struct sockaddr *) &servaddr,
             sizeof(servaddr));
-    std::cout<<"Hello message sent."<<std::endl;
+    std::cout<<"INFO: [Client] Hello message sent."<<std::endl;
 
     n = recvfrom(sockfd, (char *)buffer, MAXLINE,
                 MSG_WAITALL, (struct sockaddr *) &servaddr,
                 &len);
     buffer[n] = '\0';
-    std::cout<<"Server :"<<buffer<<std::endl;
+    std::cout<<"Client :"<<buffer<<std::endl;
 
     close(sockfd);
     return 0;

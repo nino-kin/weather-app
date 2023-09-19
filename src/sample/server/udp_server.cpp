@@ -53,7 +53,7 @@ int main() {
     sendto(sockfd, (const char *)hello, strlen(hello), 
         MSG_CONFIRM, (const struct sockaddr *) &cliaddr,
             len);
-    std::cout<<"Hello message sent."<<std::endl; 
+    std::cout<<"INFO: [Server] Hello message sent."<<std::endl; 
 
     return 0;
 }
