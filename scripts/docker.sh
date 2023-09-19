@@ -64,7 +64,7 @@ exec() {
 
 build() {
   mkdir -p $REPO_ROOT_DIR/build/
-  docker run --rm -it \
+  docker run --rm -t \
   --name $DOCKER_CONTAINER \
   $DOCKER_MOUNT_OPTION \
   $DOCKER_TAG \
