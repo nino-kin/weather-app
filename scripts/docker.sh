@@ -8,7 +8,7 @@
 #
 # Usage:
 #   docker.sh [param]
-#       (Optional)param: Docker option (e.g. run, exec, etc.)
+#       (Optional)param: Docker option (e.g. setup, build, run, exec, etc.)
 #
 # Description:
 #   This script provides simple commands so that you can manipulate 
@@ -29,7 +29,7 @@ DOCKER_CONTAINER="weather-runtime"
 DOCKER_MOUNT_OPTION="--mount type=bind,source=$REPO_ROOT_DIR,target=$DOCKER_WORK_DIR"
 
 # Build Docker image
-build() {
+setup() {
   if docker images "$IMAGE_NAME:$TAG" | grep "$IMAGE_NAME\s*$TAG"; then
     read -r -p "An image with the same name already exists. Do you want to delete it and create a new image? (y/n): " answer
     if [ "$answer" == "y" ] || [ "$answer" == "Y" ]; then
@@ -62,6 +62,23 @@ exec() {
   docker exec -it $DOCKER_CONTAINER bash
 }
 
+build() {
+  mkdir -p $REPO_ROOT_DIR/build/
+  docker run --rm -it \
+  --name $DOCKER_CONTAINER \
+  $DOCKER_MOUNT_OPTION \
+  $DOCKER_TAG \
+  bash -c "cd build && cmake .. && make"
+}
+
+kill() {
+  docker kill $DOCKER_CONTAINER
+}
+
+remove-image() {
+  docker rmi $DOCKER_TAG
+}
+
 if [ $# == 0 ]; then
   set -- --help
 fi
@@ -70,18 +87,26 @@ param=$1
 echo "${1}"
   case $param in
   --all | -all | --a | -a)
+    setup
     build
-    run
-    exec
   ;;
   --setup | -setup | setup | --docker-build | -docker-build | docker-build)
-    build
+    setup
   ;;
-  --build | -build | build | --run | -run | run | --docker-run | -docker-run | docker-run)
+  --run | -run | run | --docker-run | -docker-run | docker-run)
     run
+  ;;
+  --build | -build | build)
+    build
   ;;
   --enter | -enter | enter | --exec | -exec | exec)
     exec
+  ;;
+  --kill | -kill | kill)
+    kill
+  ;;
+  --remove-image | -remove-image | remove-image)
+    remove-image
   ;;
   *)
     echo "USAGE: $0 [command]"
