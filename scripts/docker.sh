@@ -68,7 +68,8 @@ build() {
   --name $DOCKER_CONTAINER \
   $DOCKER_MOUNT_OPTION \
   $DOCKER_TAG \
-  bash -c "cd build && cmake .. && make"
+  bash -c "cmake -S . -B build && cmake --build build"
+}
 }
 
 kill() {
