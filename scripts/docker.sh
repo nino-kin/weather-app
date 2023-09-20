@@ -106,7 +106,7 @@ echo "${1}"
   --kill | -kill | kill)
     kill
   ;;
-  --remove-image | -remove-image | remove-image)
+  --remove-image | -remove-image | remove-image | --rmi | -rmi | rmi)
     remove-image
   ;;
   *)
@@ -115,6 +115,7 @@ echo "${1}"
     echo "  setup     - Build an image from a Dockerfile"
     echo "  build     - Perform the build"
     echo "  enter     - Enter the docker container"
+    echo "  rmi       - Remove the docker image"
     echo ""
     echo "  all       - Perform all the above steps"
   ;;
