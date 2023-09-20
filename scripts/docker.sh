@@ -70,6 +70,14 @@ build() {
   $DOCKER_TAG \
   bash -c "cmake -S . -B build && cmake --build build"
 }
+
+test() {
+  mkdir -p $REPO_ROOT_DIR/build/
+  docker run --rm -t \
+  --name $DOCKER_CONTAINER \
+  $DOCKER_MOUNT_OPTION \
+  $DOCKER_TAG \
+  bash -c "cmake -S . -B build && cmake --build build && cd build && ctest -VV"
 }
 
 kill() {
@@ -99,6 +107,9 @@ echo "${1}"
   ;;
   --build | -build | build)
     build
+  ;;
+  --test | -test | test)
+    test
   ;;
   --enter | -enter | enter | --exec | -exec | exec)
     exec
