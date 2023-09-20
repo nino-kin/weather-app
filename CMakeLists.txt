@@ -6,4 +6,6 @@ project(WeatherApp)
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+include_directories(include)
+
 add_subdirectory(src)
