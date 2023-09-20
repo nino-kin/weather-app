@@ -1,4 +1,10 @@
-// Server side implementation of UDP client-server model
+/**
+ * @file udp_server.cpp
+ * @brief Server app for UDP communication model
+ * @author ninokin
+ * @date 2023/9/20
+ */
+
 #include <bits/stdc++.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -8,10 +14,8 @@
 #include <arpa/inet.h>
 #include <netinet/in.h>
 
-#define PORT     8080
-#define MAXLINE 1024
+#include "udp_common.hpp"
 
-// Driver code
 int main() {
     int sockfd;
     char buffer[MAXLINE];
@@ -33,7 +37,7 @@ int main() {
     servaddr.sin_port = htons(PORT);
 
     // Bind the socket with the server address
-    if ( bind(sockfd, (const struct sockaddr *)&servaddr, 
+    if ( bind(sockfd, (const struct sockaddr *)&servaddr,
             sizeof(servaddr)) < 0 )
     {
         perror("bind failed");
@@ -45,15 +49,15 @@ int main() {
 
     len = sizeof(cliaddr);  //len is value/result
 
-    n = recvfrom(sockfd, (char *)buffer, MAXLINE, 
+    n = recvfrom(sockfd, (char *)buffer, MAXLINE,
                 MSG_WAITALL, ( struct sockaddr *) &cliaddr,
                 &len);
     buffer[n] = '\0';
-    printf("Client : %s\n", buffer);
-    sendto(sockfd, (const char *)hello, strlen(hello), 
+    printf("Server : %s\n", buffer);
+    sendto(sockfd, (const char *)hello, strlen(hello),
         MSG_CONFIRM, (const struct sockaddr *) &cliaddr,
             len);
-    std::cout<<"INFO: [Server] Hello message sent."<<std::endl; 
+    std::cout<<"INFO: [Server] Hello message sent."<<std::endl;
 
     return 0;
 }

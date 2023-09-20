@@ -1,4 +1,4 @@
-.PHONY: cmake build clean run mkdocs-build mkdocs-serve
+.PHONY: setup build test run exec kill clean mkdocs-build mkdocs-serve
 .DEFAULT_GOAL := help
 
 SHELL := /bin/bash
@@ -10,8 +10,8 @@ ROOT_DIR := $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
 BUILD_DIR := build
 SCRIPT_DIR := scripts
 
-# Local web server port
-DOCKER_PORT := 8000
+# Docker
+DOCKER_PORT := 8000 # Local web server port
 
 # For more information on this technique, see
 # https://marmelab.com/blog/2016/02/29/auto-documented-makefile.html
@@ -22,23 +22,40 @@ help: ## Show this help message
 	| sort \
 	| awk 'BEGIN {FS = ":.*?## "}; {printf "  %-20s %s\n", $$1, $$2}'
 
-cmake: ## Running cmake
-	@echo -e "\nINFO: Running CMake..."
+setup: ## Set up environment
+	@echo -e "\nINFO: Set up your environment..."
 	@echo "================================================================================"
-	@mkdir -p $(BUILD_DIR)
-	@cd $(BUILD_DIR) && cmake ..
+	@$(ROOT_DIR)/$(SCRIPT_DIR)/docker.sh setup
 	@echo "================================================================================"
 
-build: cmake ## Build the project
+build: ## Build the project
 	@echo -e "\nINFO: Building $(PROJECT_NAME)..."
 	@echo "================================================================================"
-	@$(MAKE) -C $(BUILD_DIR)
+	@$(ROOT_DIR)/$(SCRIPT_DIR)/docker.sh build
 	@echo "================================================================================"
 
-run: build ## Run services
-	@echo -e "\nINFO: Running $(PROJECT_NAME)..."
+test: ## Test the projct
+	@echo -e "\nINFO: Testing $(PROJECT_NAME)..."
 	@echo "================================================================================"
-	@$(ROOT_DIR)/$(SCRIPT_DIR)/udp_sample.sh
+	@$(ROOT_DIR)/$(SCRIPT_DIR)/docker.sh test
+	@echo "================================================================================"
+
+run: ## Run Docker conatainer
+	@echo -e "\nINFO: Running a container..."
+	@echo "================================================================================"
+	@$(ROOT_DIR)/$(SCRIPT_DIR)/docker.sh run
+	@echo "================================================================================"
+
+exec: ## Run Docker conatainer
+	@echo -e "\nINFO: You can execute commands in a running container..."
+	@echo "================================================================================"
+	@$(ROOT_DIR)/$(SCRIPT_DIR)/docker.sh exec
+	@echo "================================================================================"
+
+kill: ## Kill Docker container
+	@echo -e "\nINFO: Kill a running container..."
+	@echo "================================================================================"
+	@$(ROOT_DIR)/$(SCRIPT_DIR)/docker.sh kill
 	@echo "================================================================================"
 
 clean: ## Clean all artifacts

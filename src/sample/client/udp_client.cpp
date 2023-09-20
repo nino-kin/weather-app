@@ -1,4 +1,10 @@
-// Client side implementation of UDP client-server model
+/**
+ * @file udp_client.cpp
+ * @brief Client app for UDP communication model
+ * @author ninokin
+ * @date 2023/9/20
+ */
+
 #include <bits/stdc++.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -8,10 +14,8 @@
 #include <arpa/inet.h>
 #include <netinet/in.h>
 
-#define PORT    8080
-#define MAXLINE 1024
+#include "udp_common.hpp"
 
-// Driver code
 int main() {
     int sockfd;
     char buffer[MAXLINE];

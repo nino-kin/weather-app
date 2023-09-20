@@ -68,7 +68,16 @@ build() {
   --name $DOCKER_CONTAINER \
   $DOCKER_MOUNT_OPTION \
   $DOCKER_TAG \
-  bash -c "cd build && cmake .. && make"
+  bash -c "cmake -S . -B build && cmake --build build"
+}
+
+test() {
+  mkdir -p $REPO_ROOT_DIR/build/
+  docker run --rm -t \
+  --name $DOCKER_CONTAINER \
+  $DOCKER_MOUNT_OPTION \
+  $DOCKER_TAG \
+  bash -c "cmake -S . -B build && cmake --build build && cd build && ctest -VV"
 }
 
 kill() {
@@ -99,13 +108,16 @@ echo "${1}"
   --build | -build | build)
     build
   ;;
+  --test | -test | test)
+    test
+  ;;
   --enter | -enter | enter | --exec | -exec | exec)
     exec
   ;;
   --kill | -kill | kill)
     kill
   ;;
-  --remove-image | -remove-image | remove-image)
+  --remove-image | -remove-image | remove-image | --rmi | -rmi | rmi)
     remove-image
   ;;
   *)
@@ -114,6 +126,7 @@ echo "${1}"
     echo "  setup     - Build an image from a Dockerfile"
     echo "  build     - Perform the build"
     echo "  enter     - Enter the docker container"
+    echo "  rmi       - Remove the docker image"
     echo ""
     echo "  all       - Perform all the above steps"
   ;;
