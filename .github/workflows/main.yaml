@@ -23,7 +23,12 @@ jobs:
         run: |
           ./scripts/docker.sh build
 
+      - name: Test
+        shell: bash
+        run: |
+          ./scripts/docker.sh test
+
       - name: Cleanup
         shell: bash
         run: |
-          ./scripts/docker.sh remove-image
+          ./scripts/docker.sh rmi
