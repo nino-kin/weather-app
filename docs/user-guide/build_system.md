@@ -1,4 +1,4 @@
-# Build environment
+# Build system
 
 ## Overview
 
@@ -22,4 +22,4 @@ cmake_minimum_required(VERSION 3.10)
 ```
 ## Reference materials
 
-[GoogleTest User’s Guide](https://google.github.io/googletest/)
+[CMake Documentation](https://cmake.org/cmake/help/v3.10/)
