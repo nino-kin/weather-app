@@ -57,8 +57,6 @@ This is an awesome application that be able to provide the weather information t
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 ### Built With
 
 * [![Docker][Docker]][Docker-url]
@@ -66,13 +64,15 @@ This is an awesome application that be able to provide the weather information t
 * GoogleTest
 * MkDocs
 
+<p align="right"><a href="#readme-top">:arrow_up: Back to top</a></p>
+
 ## Getting Started
 
 Learn how to set up and use this application locally.
 
 [Onboarding](./docs/getting_started.md)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right"><a href="#readme-top">:arrow_up: Back to top</a></p>
 
 ## Usage
 
@@ -80,7 +80,7 @@ Use this space to show useful examples of how a project can be used. Additional 
 
 _For more examples, please refer to the [Documentation](https://example.com)_
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right"><a href="#readme-top">:arrow_up: Back to top</a></p>
 
 ## Contributing
 
@@ -91,13 +91,13 @@ Don't forget to give the project a star! Thanks again!
 
 _For more information, please refer to the [Documentation](./CONTRIBUTING.md)_
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right"><a href="#readme-top">:arrow_up: Back to top</a></p>
 
 ## License
 
 Distributed under the MIT License. See [`LICENSE`](./LICENSE) for more information.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right"><a href="#readme-top">:arrow_up: Back to top</a></p>
 
 ## Acknowledgments
 
@@ -109,7 +109,7 @@ Use this space to list resources you find helpful and would like to give credit 
 * [GitHub Pages](https://pages.github.com)
 * [Font Awesome](https://fontawesome.com)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right"><a href="#readme-top">:arrow_up: Back to top</a></p>
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
