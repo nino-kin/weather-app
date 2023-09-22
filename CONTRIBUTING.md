@@ -81,6 +81,7 @@ Pull requests are the best way to propose changes to the codebase (we use [GitHu
 4. Ensure the test suite passes.
 5. Make sure your code lints.
 6. Issue that pull request!
+7. Get review by [code owners](.github/CODEOWNERS).
 
 ### Making Trivial Changes
 
