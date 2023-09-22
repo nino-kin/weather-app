@@ -129,5 +129,5 @@ Use this space to list resources you find helpful and would like to give credit 
 [issues-shield]: https://img.shields.io/github/issues/nino-kin/weather-app.svg?style=for-the-badge
 [issues-url]: https://github.com/nino-kin/weather-app/issues
 [license-shield]: https://img.shields.io/github/license/nino-kin/weather-app.svg?style=for-the-badge
-[license-url]: https://github.com/nino-kin/weather-app/blob/master/LICENSE
+[license-url]: https://github.com/nino-kin/weather-app/blob/main/LICENSE
 [product-screenshot]: docs/images/screenshot.png
