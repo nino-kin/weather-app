@@ -11,10 +11,10 @@
 <br />
 <div align="center">
   <a href="https://github.com/nino-kin/weather-app">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="docs/images/logo.svg" alt="Logo" width="200">
   </a>
 
-  <h3 align="center">Weather App</h3>
+  <h3 align="center">Weather Whisper</h3>
 
   <p align="center">
     Your Daily Weather Companion!
