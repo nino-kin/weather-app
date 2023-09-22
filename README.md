@@ -43,16 +43,10 @@
     </li>
     <li>
       <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
@@ -63,28 +57,20 @@ This is an awesome application that be able to provide the weather information t
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+### Built With
+
+* [![Docker][Docker]][Docker-url]
+* [![CMake][CMake]][CMake-url]
+* GoogleTest
+* MkDocs
+
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally. To get a local copy up and running follow these simple example steps.
+Learn how to set up and use this application locally.
 
-### Prerequisites
-
-Before you set up your environment, check the following requirements:
-
-- Operating system
-  - Linux (Ubuntu 20 and later, x86_64)
-- Docker 19 and later (required for most plugins)
-  - Linux Hosts: Docker must be set [to run without sudo](https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user)
-- Installation Script Requirements
-  - bash
-  - curl
-
-This project expects that you have at least a basic knowledge of the following technologies:
-
-- Linux command line
-- C++
-- [CMake](https://cmake.org/cmake/help/v3.10/)
-- [Docker](https://www.docker.com/)
+[Onboarding](./docs/getting_started.md)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -93,6 +79,17 @@ This project expects that you have at least a basic knowledge of the following t
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
 _For more examples, please refer to the [Documentation](https://example.com)_
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Contributing
+
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
+Don't forget to give the project a star! Thanks again!
+
+_For more information, please refer to the [Documentation](./CONTRIBUTING.md)_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -108,12 +105,9 @@ Use this space to list resources you find helpful and would like to give credit 
 
 * [Choose an Open Source License](https://choosealicense.com)
 * [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
-* [Malven's Grid Cheatsheet](https://grid.malven.co/)
 * [Img Shields](https://shields.io)
 * [GitHub Pages](https://pages.github.com)
 * [Font Awesome](https://fontawesome.com)
-* [React Icons](https://react-icons.github.io/react-icons/search)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -131,3 +125,7 @@ Use this space to list resources you find helpful and would like to give credit 
 [license-shield]: https://img.shields.io/github/license/nino-kin/weather-app.svg?style=for-the-badge
 [license-url]: https://github.com/nino-kin/weather-app/blob/main/LICENSE
 [product-screenshot]: docs/images/screenshot.png
+[CMake]: https://img.shields.io/badge/CMake-ffffff?style=for-the-badge&logo=cmake&logoColor=064F8C
+[CMake-url]: https://cmake.org/cmake/help/v3.10/
+[Docker]: https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white
+[Docker-url]: https://www.docker.com/
