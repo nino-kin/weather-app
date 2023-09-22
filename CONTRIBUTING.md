@@ -144,7 +144,7 @@ Follow [the commit conventions](https://www.conventionalcommits.org/en/). We rec
 * Use the imperative mood ("Move cursor to..." not "Moves cursor to...")
 * Limit the first line to 72 characters or less
 * Reference issues and pull requests liberally after the first line
-* When only changing documentation, include `[ci skip]` in the commit title
+* When only changing documentation, include `[ci skip]` in the commit title (see [here](https://docs.github.com/en/actions/managing-workflow-runs/skipping-workflow-runs))
 
 ### Documentation
 

@@ -5,6 +5,7 @@
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
+[![Watchers][watchers-shield]][watchers-url]
 [![MIT License][license-shield]][license-url]
 
 <!-- PROJECT LOGO -->
@@ -123,6 +124,8 @@ Use this space to list resources you find helpful and would like to give credit 
 [stars-url]: https://github.com/nino-kin/weather-app/stargazers
 [issues-shield]: https://img.shields.io/github/issues/nino-kin/weather-app.svg?style=for-the-badge
 [issues-url]: https://github.com/nino-kin/weather-app/issues
+[watchers-shield]: https://img.shields.io/github/watchers/nino-kin/weather-app.svg?style=for-the-badge
+[watchers-url]: https://github.com/nino-kin/weather-app/watchers
 [license-shield]: https://img.shields.io/github/license/nino-kin/weather-app.svg?style=for-the-badge
 [license-url]: https://github.com/nino-kin/weather-app/blob/main/LICENSE
 [product-screenshot]: docs/images/screenshot.png
