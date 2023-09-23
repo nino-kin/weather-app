@@ -1,0 +1,46 @@
+@startuml WeatherApp
+
+left to right direction
+
+actor User as U
+U -> (Weather App): Use
+
+rectangle "Weather App" as WA {
+    User --> (Check Current Weather): Request
+    (Check Current Weather) --> (Fetch Current Weather Data): Request
+    (Fetch Current Weather Data) --> (Display Current Weather): Data
+    (Display Current Weather) --> User: Displayed Weather
+
+    User --> (Check Weekly Forecast): Request
+    (Check Weekly Forecast) --> (Fetch Weekly Forecast Data): Request
+    (Fetch Weekly Forecast Data) --> (Display Weekly Forecast): Data
+    (Display Weekly Forecast) --> User: Displayed Forecast
+
+    User --> (Search Location): Request
+    (Search Location) --> (Display Locations): Data
+    (Display Locations) --> (Select Location): Request
+    (Select Location) --> User: Location Selected
+
+    User --> (Set Notification): Request
+    (Set Notification) --> (Specify Time): Request
+    (Specify Time) --> User: Time Specified
+    (Set Notification) --> (Enable Notification): Request
+    (Enable Notification) --> User: Notifications Enabled
+
+    User --> (View Past Weather Data): Request
+    (View Past Weather Data) --> (Fetch Past Weather Data): Request
+    (Fetch Past Weather Data) --> (Display Past Weather Data): Data
+    (Display Past Weather Data) --> User: Displayed Past Data
+
+    User --> (Convert Temperature Unit): Request
+    (Convert Temperature Unit) --> (Display Temperature Unit Options): Data
+    (Display Temperature Unit Options) --> (Select Temperature Unit): Request
+    (Select Temperature Unit) --> User: Unit Selected
+
+    User --> (Provide Weather Advice): Request
+    (Provide Weather Advice) --> (Fetch Advice Data): Request
+    (Fetch Advice Data) --> (Display Advice): Data
+    (Display Advice) --> User: Displayed Advice
+}
+
+@enduml
