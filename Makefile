@@ -62,6 +62,7 @@ clean: ## Clean all artifacts
 	@echo -e "\nINFO: Cleaning up..."
 	@sudo rm -rf $(BUILD_DIR)
 	@[ -z "$$(find . -maxdepth 1 -type d -name 'site')" ] || sudo chmod -R 777 site/ && rm -rf site/
+	@[ -z "$$(find . -maxdepth 1 -type d -name 'out')" ] || sudo chmod -R 777 out/ && rm -rf out/
 
 #---------------------------------------#
 # Docker                                #
