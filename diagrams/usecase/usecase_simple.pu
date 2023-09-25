@@ -1,0 +1,48 @@
+@startuml component
+
+' Initial setting
+left to right direction
+title Use Case Diagram
+
+' Declaration of characters
+actor User as U
+
+' Use case definition
+rectangle "Weather App" as WA {
+    usecase "Want to get weather data" as UC_GetWX
+    usecase "Want to get current weather data" as UC_GetCurrentWX
+    usecase "Want to get past weather data" as UC_GetPastWX
+    usecase "Want to get forcast weather data" as UC_GetForcastWX
+
+    usecase "Display weather data" as UC_DisplayWX
+
+    usecase "Want to set location" as UC_SetLoc
+    usecase "Want to set country code" as UC_SetCtryCode
+    usecase "Want to set latitude/longitude" as UC_SetLatng
+    usecase "Want to save in bookmark" as UC_SaveBookmark
+
+    usecase "Want to receive notification" as UC_ReceiveNotif
+    usecase "Want to set specify time" as UC_SetSpecifyTim
+    usecase "Want to get weather alerts" as UC_GetWXAlerts
+
+    usecase "Want to view weather history" as UC_ViewWXHistory
+}
+
+U --> UC_GetWX
+UC_GetWX ..> UC_GetCurrentWX: <<extend>>
+UC_GetWX ..> UC_GetPastWX: <<extend>>
+UC_GetWX ..> UC_GetForcastWX: <<extend>>
+UC_GetWX <.. UC_DisplayWX: <<include>>
+
+U --> UC_SetLoc
+UC_SetLoc <.. UC_SetCtryCode: <<include>>
+UC_SetLoc <.. UC_SetLatng: <<include>>
+UC_SetLoc ..> UC_SaveBookmark: <<extend>>
+
+U --> UC_ReceiveNotif
+UC_ReceiveNotif <.. UC_SetSpecifyTim: <<include>>
+UC_ReceiveNotif <.. UC_GetWXAlerts: <<include>>
+
+U --> UC_ViewWXHistory
+
+@enduml
