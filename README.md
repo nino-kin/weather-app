@@ -12,7 +12,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/nino-kin/weather-app">
-    <img src="docs/images/logo.svg" alt="Logo" width="200">
+    <img src="docs/assets/images/logo.svg" alt="Logo" width="200">
   </a>
 
   <h3 align="center">Weather Whisper</h3>
@@ -128,7 +128,7 @@ Use this space to list resources you find helpful and would like to give credit 
 [watchers-url]: https://github.com/nino-kin/weather-app/watchers
 [license-shield]: https://img.shields.io/github/license/nino-kin/weather-app.svg?style=for-the-badge
 [license-url]: https://github.com/nino-kin/weather-app/blob/main/LICENSE
-[product-screenshot]: docs/images/screenshot.png
+[product-screenshot]: docs/assets/images/screenshot.png
 [CMake]: https://img.shields.io/badge/CMake-ffffff?style=for-the-badge&logo=cmake&logoColor=064F8C
 [CMake-url]: https://cmake.org/cmake/help/v3.10/
 [Docker]: https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white
