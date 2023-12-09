@@ -60,10 +60,6 @@ This is an awesome application that be able to provide the weather information t
 
 ### Built With
 
-* [![Docker][Docker]][Docker-url]
-* [![CMake][CMake]][CMake-url]
-* [![Qt][Qt]][Qt-url]
-* [GoogleTest](http://google.github.io/googletest/)
 * [MkDocs](https://www.mkdocs.org/)
 
 <p align="right"><a href="#readme-top">:arrow_up: Back to top</a></p>
@@ -129,9 +125,3 @@ Use this space to list resources you find helpful and would like to give credit 
 [license-shield]: https://img.shields.io/github/license/nino-kin/weather-app.svg?style=for-the-badge
 [license-url]: https://github.com/nino-kin/weather-app/blob/main/LICENSE
 [product-screenshot]: docs/images/screenshot.png
-[CMake]: https://img.shields.io/badge/CMake-ffffff?style=for-the-badge&logo=cmake&logoColor=064F8C
-[CMake-url]: https://cmake.org/cmake/help/v3.10/
-[Docker]: https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white
-[Docker-url]: https://www.docker.com/
-[Qt]: https://img.shields.io/badge/qt-04444c?style=for-the-badge&logo=qt&logoColor=41CD52
-[Qt-url]: https://www.qt.io/
