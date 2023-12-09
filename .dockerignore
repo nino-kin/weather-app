@@ -1,6 +1,0 @@
-.git*
-.vscode/
-build/
-docs/
-README.md
-mkdocs.yaml
