@@ -1,4 +1,4 @@
-.PHONY: clean mkdocs-build mkdocs-serve
+.PHONY: clean debug mkdocs-build mkdocs-serve
 .DEFAULT_GOAL := help
 
 SHELL := /bin/bash
@@ -7,6 +7,11 @@ PROJECT_NAME := weather_app
 
 PWD := $(shell pwd)
 ROOT_DIR := $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
+
+# TODO: Define your OpenWeather API key
+# https://openweathermap.org/api
+API_KEY := YOUR_API_KEY
+DEVICE := Chrome
 
 # For more information on this technique, see
 # https://marmelab.com/blog/2016/02/29/auto-documented-makefile.html
@@ -27,6 +32,10 @@ clean: ## Clean all artifacts
 	@echo -e "\nINFO: Cleaning up..."
 	@flutter clean
 	@[ -z "$$(find . -maxdepth 1 -type d -name 'site')" ] || sudo chmod -R 777 site/ && rm -rf site/
+
+debug: ## Run a flutter app in debug mode
+	@echo -e "\nINFO: Running the app in debug mode..."
+	@flutter run --debug -d $(DEVICE) --dart-define=API_KEY=$(API_KEY)
 
 #---------------------------------------#
 # MkDocs                                #
