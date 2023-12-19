@@ -57,7 +57,7 @@
 This is an awesome application that be able to provide the weather information to you. For questions and feedback, please reach out to us [here](https://github.com/nino-kin/weather-app/discussions/landing).
 
 <p align="center">
-  <img src="assets/images/screenshot.png" />
+  <img src="assets/images/screenshot.png" width=50% height=50%/>
 </p>
 
 ### Built With
