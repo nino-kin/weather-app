@@ -26,6 +26,12 @@ help: ## Show this help message
 	| awk 'BEGIN {FS = ":.*?## "}; {printf "  %-20s %s\n", $$1, $$2}'
 
 #---------------------------------------#
+# Simulator                             #
+#---------------------------------------#
+open-sim: ## Open a iOS simulator
+	@open -a Simulator
+
+#---------------------------------------#
 # flutter                               #
 #---------------------------------------#
 clean: ## Clean all artifacts
