@@ -104,7 +104,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             ),
                             const SizedBox(height: 8),
                             const Text(
-                              'Good Afternoon',
+                              'Good Morning',
                               style: TextStyle(
                                   color: Colors.white,
                                   fontSize: 25,
@@ -265,6 +265,69 @@ class _HomeScreenState extends State<HomeScreen> {
                                 ]),
                               ],
                             ),
+                            const Padding(
+                              padding: EdgeInsets.symmetric(vertical: 5.0),
+                              child: Divider(
+                                color: Colors.grey,
+                              ),
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Row(children: [
+                                  Image.asset(
+                                    'assets/humidity.png',
+                                    scale: 8,
+                                  ),
+                                  const SizedBox(width: 5),
+                                  Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      const Text(
+                                        'Humidity',
+                                        style: TextStyle(
+                                            color: Colors.white,
+                                            fontWeight: FontWeight.w300),
+                                      ),
+                                      const SizedBox(height: 3),
+                                      Text(
+                                        "${state.weather.humidity!.round()} %",
+                                        style: const TextStyle(
+                                            color: Colors.white,
+                                            fontWeight: FontWeight.w700),
+                                      )
+                                    ],
+                                  )
+                                ]),
+                                Row(children: [
+                                  Image.asset(
+                                    'assets/wind.png',
+                                    scale: 8,
+                                  ),
+                                  const SizedBox(width: 5),
+                                  Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      const Text(
+                                        'Wind Speed',
+                                        style: TextStyle(
+                                            color: Colors.white,
+                                            fontWeight: FontWeight.w300),
+                                      ),
+                                      const SizedBox(height: 3),
+                                      Text(
+                                        "${state.weather.windSpeed!.round()} m/s",
+                                        style: const TextStyle(
+                                            color: Colors.white,
+                                            fontWeight: FontWeight.w700),
+                                      )
+                                    ],
+                                  )
+                                ]),
+                              ],
+                            )
                           ],
                         ),
                       );
