@@ -19,6 +19,7 @@ changelog:
       labels:
         - Semver-Patch
         - bug
+        - invalid
     - title: Other Changes
       labels:
         - "*"
