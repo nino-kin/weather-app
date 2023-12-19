@@ -62,7 +62,8 @@ This is an awesome application that be able to provide the weather information t
 
 ### Built With
 
-* [MkDocs](https://www.mkdocs.org/)
+- [![Flutter][Flutter]][Flutter-url]
+- [MkDocs](https://www.mkdocs.org/)
 
 <p align="right"><a href="#readme-top">:arrow_up: Back to top</a></p>
 
@@ -103,11 +104,12 @@ Distributed under the MIT License. See [`LICENSE`](./LICENSE) for more informati
 
 Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
 
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Img Shields](https://shields.io)
-* [GitHub Pages](https://pages.github.com)
-* [Font Awesome](https://fontawesome.com)
+- [Choose an Open Source License](https://choosealicense.com)
+- [OpenWeather](https://openweathermap.org/)
+- [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
+- [Img Shields](https://shields.io)
+- [GitHub Pages](https://pages.github.com)
+- [Font Awesome](https://fontawesome.com)
 
 <p align="right"><a href="#readme-top">:arrow_up: Back to top</a></p>
 
@@ -127,3 +129,5 @@ Use this space to list resources you find helpful and would like to give credit 
 [license-shield]: https://img.shields.io/github/license/nino-kin/weather-app.svg?style=for-the-badge
 [license-url]: https://github.com/nino-kin/weather-app/blob/main/LICENSE
 [product-screenshot]: docs/images/screenshot.png
+[Flutter]: https://img.shields.io/badge/Flutter-ffffff?style=for-the-badge&logo=flutter&logoColor=02569B
+[Flutter-url]: https://flutter.dev/
