@@ -1,4 +1,4 @@
-.PHONY: clean mkdocs-build mkdocs-serve
+.PHONY: setup clean mkdocs-build mkdocs-serve
 .DEFAULT_GOAL := help
 
 SHELL := /bin/bash
@@ -7,6 +7,10 @@ PROJECT_NAME := weather_app
 
 PWD := $(shell pwd)
 ROOT_DIR := $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
+SCRIPT_DIR := scripts
+
+# Docker
+DOCKER_PORT := 8000 # Local web server port
 
 # For more information on this technique, see
 # https://marmelab.com/blog/2016/02/29/auto-documented-makefile.html
@@ -21,12 +25,29 @@ help: ## Show this help message
 	| awk 'BEGIN {FS = ":.*?## "}; {printf "  %-20s %s\n", $$1, $$2}'
 
 #---------------------------------------#
+# Docker                                #
+#---------------------------------------#
+setup: ## Build the Docker image
+	@echo -e "\nINFO: Build the Docker image..."
+	@echo "================================================================================"
+	@$(ROOT_DIR)/$(SCRIPT_DIR)/docker.sh setup
+	@echo "================================================================================"
+
+run: ## Run Docker container
+	@echo -e "\nINFO: Running a container..."
+	@echo "================================================================================"
+	@$(ROOT_DIR)/$(SCRIPT_DIR)/docker.sh run
+	@echo "================================================================================"
+
+#---------------------------------------#
 # flutter                               #
 #---------------------------------------#
 clean: ## Clean all artifacts
 	@echo -e "\nINFO: Cleaning up..."
+	@echo "================================================================================"
 	@flutter clean
 	@[ -z "$$(find . -maxdepth 1 -type d -name 'site')" ] || sudo chmod -R 777 site/ && rm -rf site/
+	@echo "================================================================================"
 
 #---------------------------------------#
 # MkDocs                                #
